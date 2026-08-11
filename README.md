@@ -16,14 +16,14 @@ Lab 1 establishes the full-stack project foundation using:
 
 ## Setup
 
-### 1.Clone the repository:
+### 1. Clone the repository:
 
 ```bash
 git clone <https://github.com/MeldyRose/TokTickIT-Individual-Sprints.git>
 cd TokTickIT-Individual-Sprints
 ```
 
-### 2.Install Dependencies
+### 2. Install Dependencies
 
 Install the frontend dependencies:
 
@@ -39,7 +39,7 @@ cd ../server
 npm install
 ```
 
-### 3.Create the environment file from the provided template:
+### 3. Create the environment file from the provided template:
 
 Create a `.env` file in the `server` directory based on `.env.example`.
 
@@ -80,7 +80,7 @@ cd client
 npm run dev
 ```
 
-Open the local URL provided by Vite in your browser(usually available at http://localhost:5173).
+Open the local URL provided by Vite in your browser (usually available at http://localhost:5173).
 
 ## Tests
 
