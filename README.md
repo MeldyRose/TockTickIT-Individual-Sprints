@@ -19,7 +19,7 @@ Lab 1 establishes the full-stack project foundation using:
 ### 1. Clone the repository:
 
 ```bash
-git clone <https://github.com/MeldyRose/TokTickIT-Individual-Sprints.git>
+git clone https://github.com/MeldyRose/TokTickIT-Individual-Sprints.git
 cd TokTickIT-Individual-Sprints
 ```
 
