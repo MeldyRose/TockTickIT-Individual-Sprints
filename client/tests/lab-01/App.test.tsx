@@ -27,6 +27,7 @@ describe("App", () => {
     fireEvent.click(button);
 
     expect(await screen.findByText(/Online/i)).toBeInTheDocument();
+    expect(screen.getByText("Supported Request Categories:")).toBeInTheDocument();
     expect(screen.getByText("Account and Access")).toBeInTheDocument();
     expect(screen.getByText("Hardware")).toBeInTheDocument();
     expect(screen.getByText("Software")).toBeInTheDocument();

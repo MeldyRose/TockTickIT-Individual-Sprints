@@ -9,7 +9,7 @@
 |  6  | feature/1-project-foundation | Approved. Issue 1 meets the project-foundation criteria, with the required setup files, README instructions, and successful builds/tests. The `/api/health` issue belongs to Issue 2 and does not block this PR. |
 |  7  | feature/2-health-check | Approved. Issue 2 meets all acceptance criteria, including the `/api/health` endpoint, frontend Online/Offline handling, passing tests, and successful client/server builds. The required backend fix was completed and verified. |
 |  8  | feature/3-category-seed | Approved. Issue 3 meets all acceptance criteria, including the Category model, migration, idempotent seeding, and successful server build/tests. The unnecessary `SHADOW_DATABASE_URL` configuration was removed and the fresh database setup was re-verified successfully. |
-|    | feature/4-category-list |  |
+|  9  | feature/4-category-list |  |
 
 Feature 1:Setting up project foundation
 Reviewer comment I received: The reviewer confirmed the foundation mostly worked but requested a tracked of `server/.env.example` since I accidentally delete the exclamation mark in the `.gitignore`. Also require to complete README setup instruction, and clarification about the health-check in Issue 2.

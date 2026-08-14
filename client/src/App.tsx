@@ -36,13 +36,16 @@ export default function App() {
 
       {state === "success" && (
         <div className="alert alert-success mt-3" role="status">
-          <div><strong>Status:</strong> Online</div>
+          <div><strong>System Status:</strong> Online</div>
           {categories.length > 0 && (
-            <ul className="mt-2 mb-0">
-              {categories.map((cat) => (
-                <li key={cat.id}>{cat.name}</li>
-              ))}
-            </ul>
+            <>
+              <div className="mt-2"><strong>Supported Request Categories:</strong></div>
+              <ul className="mt-1 mb-0">
+                {categories.map((cat) => (
+                  <li key={cat.id}>{cat.name}</li>
+                ))}
+              </ul>
+            </>
           )}
         </div>
       )}

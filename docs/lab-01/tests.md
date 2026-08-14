@@ -4,11 +4,11 @@ All test files live under server/tests/lab-01/ and client/tests/lab-01/.
 
 | # | Tool | Test | Result |
 |---|------|------|--------|
-| 1 | Supertest | GET /api/health returns 200, status=ok | PASSED |
-| 2 | Supertest | GET /api/categories returns 4 seeded categories in id order | PASSED |
-| 3 | Vitest | Heading renders | PASSED |
-| 4 | Vitest | Success state shows Online + category list | PASSED |
-| 5 | Vitest | Error state shows Offline + message | PASSED |
+| API-01 | Supertest | GET /api/health returns 200, status=ok | PASSED |
+| API-02 | Supertest | GET /api/categories returns 4 seeded categories in id order | PASSED |
+| UI-01  | Vitest | Heading renders | PASSED |
+| UI-02  | Vitest | Success state shows Online + category list | PASSED |
+| UI-03  | Vitest | Error state shows Offline + message | PASSED |
 
 Paste your passing terminal output / screenshot below.
 ![1](image.png)
