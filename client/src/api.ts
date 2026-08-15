@@ -17,22 +17,22 @@ export async function checkSystem(): Promise<SystemStatus> {
   try {
     healthRes = await fetch(`${API_URL}/api/health`);
   } catch {
-    throw new Error("Backend API is unavailable");
+    throw new Error("Unable to connect to TokTickIT API");
   }
 
   if (!healthRes.ok) {
-    throw new Error("Backend API is unavailable");
+    throw new Error("Unable to connect to TokTickIT API");
   }
 
   let categoriesRes: Response;
   try {
     categoriesRes = await fetch(`${API_URL}/api/categories`);
   } catch {
-    throw new Error("Backend API is unavailable");
+    throw new Error("Unable to connect to TokTickIT API");
   }
 
   if (!categoriesRes.ok) {
-    throw new Error("Backend API is unavailable");
+    throw new Error("Unable to connect to TokTickIT API");
   }
 
   const categories: Category[] = await categoriesRes.json();

@@ -36,7 +36,7 @@ describe("App", () => {
 
   it("shows an Offline error message when the API is unavailable", async () => {
     vi.spyOn(api, "checkSystem").mockRejectedValueOnce(
-      new Error("Backend API is unavailable")
+      new Error("Unable to connect to TokTickIT API")
     );
 
     render(<App />);
@@ -44,7 +44,7 @@ describe("App", () => {
     fireEvent.click(button);
 
     expect(await screen.findByText(/Offline/i)).toBeInTheDocument();
-    expect(screen.getByText("Backend API is unavailable")).toBeInTheDocument();
+    expect(screen.getByText("Unable to connect to TokTickIT API")).toBeInTheDocument();
   });
 });
 
