@@ -19,7 +19,7 @@ export default function App() {
         setState("success");
       }
     } catch (err: any) {
-      setErrorMessage(err?.message || "Backend API is unavailable");
+      setErrorMessage(err?.message || "Unable to connect to TokTickIT API");
       setState("error");
     }
   }
@@ -52,8 +52,8 @@ export default function App() {
 
       {state === "error" && (
         <div className="alert alert-danger mt-3" role="alert">
-          <div><strong>Status:</strong> Offline</div>
-          <div>{errorMessage || "Backend API is unavailable"}</div>
+          <div><strong>System Status:</strong> Offline</div>
+          <div>{errorMessage || "Unable to connect to TokTickIT API"}</div>
         </div>
       )}
     </div>
