@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { checkSystem, Category } from "./api.js";
 
-// UI states you must handle for Issue 4: idle, loading, success, error.
+// UI states: idle, loading, success, error.
 type UiState = "idle" | "loading" | "success" | "error";
 
 export default function App() {
@@ -10,9 +10,6 @@ export default function App() {
   const [errorMessage, setErrorMessage] = useState<string>("");
 
   async function handleCheck() {
-    // TODO(Issue 4): set loading, call checkSystem(), then either
-    //   - success: store categories and show Online + the list, or
-    //   - error: show Offline + a useful message.
     setState("loading");
     setErrorMessage("");
     try {
@@ -37,17 +34,18 @@ export default function App() {
         {state === "loading" ? "Loading…" : "Check System"}
       </button>
 
-      {/* TODO(Issue 4): render loading / success (Online + categories) / error (Offline) states. */}
-
       {state === "success" && (
         <div className="alert alert-success mt-3" role="status">
-          <div><strong>Status:</strong> Online</div>
+          <div><strong>System Status:</strong> Online</div>
           {categories.length > 0 && (
-            <ul className="mt-2 mb-0">
-              {categories.map((cat) => (
-                <li key={cat.id}>{cat.name}</li>
-              ))}
-            </ul>
+            <>
+              <div className="mt-2"><strong>Supported Request Categories:</strong></div>
+              <ul className="mt-1 mb-0">
+                {categories.map((cat) => (
+                  <li key={cat.id}>{cat.name}</li>
+                ))}
+              </ul>
+            </>
           )}
         </div>
       )}
